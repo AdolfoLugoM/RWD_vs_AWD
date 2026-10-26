@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo - Versión Móvil (AWD)</title>
+
+    <link rel="stylesheet" href="/CSS/styles.css">
+</head>
+
+<body>
+    <header class="mobile-header">
+        <h2>Catálogo Móvil (AWD)</h2>
+
+        <nav>
+            <a href="/responsive">Responsivo</a>
+            <a href="/adaptive">Adaptativo</a>
+        </nav>
+    </header>
+
+    <main class="mobile-main">
+        <p>Versión ligera optimizada para dispositivos móviles (DOM reducido).</p>
+
+        <!-- Filtros: formulario GET, el servidor filtra y devuelve solo lo necesario -->
+        <details class="filters-sidebar">
+            <summary>Filtros</summary>
+
+            <form method="GET" action="/adaptive">
+                <div class="filter-group">
+                    <label for="tipo">Tipo de componente</label>
+                    <select id="tipo" name="tipo" class="filter-select">
+                        <option value="">Todos</option>
+                        <% tipos.forEach(t => { %>
+                            <option value="<%= t.value %>" <%= filtros.tipo === t.value ? 'selected' : '' %>><%= t.label %></option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="min">Precio (MXN)</label>
+                    <div class="price-range">
+                        <input type="number" id="min" name="min" class="filter-select" placeholder="Mín" min="0" step="100" value="<%= filtros.min %>">
+                        <span>–</span>
+                        <input type="number" name="max" class="filter-select" placeholder="Máx" min="0" step="100" value="<%= filtros.max %>">
+                    </div>
+                </div>
+
+                <button type="submit" class="buy-btn">Aplicar</button>
+                <a href="/adaptive">Limpiar</a>
+            </form>
+        </details>
+
+        <p class="filter-count">Mostrando <%= products.length %> productos</p>
+
+        <% if (products.length === 0) { %>
+            <p>Ningún producto coincide con los filtros.</p>
+        <% } %>
+
+        <!-- Lista simple de productos sin elementos pesados innecesarios -->
+        <ul class="mobile-product-list">
+            <% products.forEach(product => { %>
+                <li class="mobile-product-card">
+                    <img src="<%= product.image %>" alt="<%= product.name %>" class="mobile-product-img" loading="lazy"><br>
+
+                    <strong><%= product.name %></strong><br>
+                    <span class="badge-componente">Tipo: <%= product.componente %></span><br>
+                    <span><%= product.specs %></span><br>
+                    <span class="product-price">$<%= product.precio.toLocaleString('es-MX', { minimumFractionDigits: 2 }) %></span><br>
+
+                    <button class="mobile-buy-btn">Comprar</button>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+</body>
+</html>

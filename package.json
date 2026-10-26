@@ -1,0 +1,23 @@
+{
+    "name": "practica-rwd-awd",
+    "version": "1.0.0",
+    "description": "Práctica de Laboratorio: RWD vs. AWD para Catálogo de Hardware",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "ejs": "^3.1.9",
+        "express": "^4.19.2",
+        "express-useragent": "^1.0.15"
+    },
+    "keywords": [
+        "rwd",
+        "awd",
+        "responsive",
+        "adaptive",
+        "express"
+    ],
+    "author": "Estudiante",
+    "license": "MIT"
+}

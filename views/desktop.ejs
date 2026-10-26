@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Catálogo - Versión Desktop (AWD)</title>
+    
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Panel de Servidores - Escritorio (AWD)</h1>
+        
+        <p>Vista completa con analíticas y tablas detalladas</p>
+        
+        <nav>
+            <a href="/responsive">Responsivo</a>
+            <!-- http://localhost:3000/responsive -->
+            <a href="/adaptive">Adaptativo</a>
+            <!-- http://localhost:3000/adaptive -->
+        </nav>
+    </header>
+    
+    <main class="container">
+        <!-- Tabla de especificaciones completa que NO se envía a móviles -->
+        <section class="full-specs">
+            <h2>Especificaciones Técnicas Completas</h2>
+            
+            <table border="1">
+                <tr>
+                    <th>Componente</th>
+                    <th>Tipo</th>
+                    <th>Especificaciones</th>
+                    <th>Precio</th>
+                </tr>
+                
+                <% products.forEach(product => { %>
+                    <tr>
+                        <td><%= product.name %></td>
+                        <td><strong><%= product.componente %></strong></td>
+                        <td><%= product.specs %></td>
+                        <td>$<%= product.precio %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </section>
+        
+        <!-- Gráfico pesado de comparativa que el servidor omite en móviles -->
+        <aside class="heavy-chart">
+            <h3>Gráfica Avanzada de Rendimiento</h3>
+            <div class="chart-container-box">
+                [ Gráfico de Comparativa de Servidores ]
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

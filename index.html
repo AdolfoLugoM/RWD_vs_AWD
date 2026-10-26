@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Catálogo de Hardware - RWD</title>
+    
+    <link rel="stylesheet" href="CSS/styles.css">
+    
+    <script src="js/filtros.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Catálogo de Componentes de Servidor (RWD)</h1>
+        <!-- Activar el nodo server.js antes de entrar a los enlaces -->
+        <nav>
+            <a href="/responsive">Responsivo</a>
+            <!-- http://localhost:3000/responsive -->
+            <a href="/adaptive">Adaptativo</a>
+            <!-- http://localhost:3000/adaptive -->
+        </nav>
+    </header>
+    
+    <div class="main-container">
+        <!-- Cuadrícula de productos (12 tarjetas) -->
+        <main class="catalog-grid">
+            <article class="product-card" data-tipo="fuente" data-precio="1619">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-CORSAIR-CP-9020295-NA-de5805.webp" type="image/webp">
+                    <img src="IMAGES/CP-CORSAIR-CP-9020295-NA-de5805.webp" alt="Feunte de poder RM750e" loading="lazy">
+                </picture>
+                
+                <h2>Fuente de Poder Corsair RM750e 80 PLUS Gold ATX</h2>
+                
+                <p class="specs">Modular, 24-pin ATX, 120mm, 750W</p>
+                
+                <p class="specs">$1,619.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="tarjeta-madre" data-precio="2379">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-MSI-B650MGAMINGWIFI-6de82b.jpg" type="image/webp">
+                    <img src="IMAGES/CP-MSI-B650MGAMINGWIFI-6de82b.jpg" alt="Tarjeta Madre MSI" loading="lazy">
+                </picture>
+                
+                <h2>Tarjeta Madre MSI B650M GAMING WIFI</h2>
+                
+                <p class="specs">Micro-ATX, Socket AM5, AMD B650, 128GB DDR5, HDMI/DP para AMD</p>
+                
+                <p class="precio">$2,379.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="gabinete" data-precio="879">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-BALAMRUSH-BR-943956-82ee95.jpg" type="image/webp">
+                    <img src="IMAGES/CP-BALAMRUSH-BR-943956-82ee95.jpg" alt="Gabinete" loading="lazy">
+                </picture>
+                
+                <h2>Gabinete Balam Rush DRAGONFLY VENTRA</h2>
+                
+                <p class="specs">Midi-Tower, ATX/Micro-ATX/Mini-ITX, USB 2.0/3.0, sin Fuente, 4 Ventiladores Instalados, Negro</p>
+                
+                <p class="precio">$879.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="tarjeta-video" data-precio="6379">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-XFX-RX-95SWFT8BE-166e37.jpg" type="image/webp">
+                    <img src="IMAGES/CP-XFX-RX-95SWFT8BE-166e37.jpg" alt="Tarjeta de Video" loading="lazy">
+                </picture>
+                
+                <h2>Tarjeta de Video XFX AMD Radeon RX 9050 SWIFT</h2>
+                
+                <p class="specs">8GB 128-bit GDDR6, PCI Express 5.0, Mín. 450W</p>
+                
+                <p class="precio">6,379.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="enfriamiento" data-precio="1189">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-MSI-MAGCORELIQUIDA13360-c34f8a.jpg" type="image/webp">
+                    <img src="IMAGES/CP-MSI-MAGCORELIQUIDA13360-c34f8a.jpg" alt="Enfriamiento Liquido" loading="lazy">
+                </picture>
+                
+                <h2>MSI MAG CORELIQUID A13 360 Enfriamiento Líquido</h2>
+                
+                <p class="specs">CPU, 3x 120mm, hasta 2000RPM, Negro</p>
+                
+                <p class="precio">$1,189.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="ram" data-precio="5789">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-XPG-AX5U6000C4816G-SLABRWH-0313c8.jpg" type="image/webp">
+                    <img src="IMAGES/CP-XPG-AX5U6000C4816G-SLABRWH-0313c8.jpg" alt="Memoria RAM" loading="lazy">
+                </picture>
+                
+                <h2>Memoria RAM XPG Lancer Blade DDR5</h2>
+                
+                <p class="specs">DDR5, 6000MHz, 16GB, CL48, XMP/EXPO, Blanco</p>
+                
+                <p class="precio">$5,789.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="tarjeta-video" data-precio="25449">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-ASUS-90YV0MF1-M0AA00-55ef2c.jpg" type="image/webp">
+                    <img src="IMAGES/CP-ASUS-90YV0MF1-M0AA00-55ef2c.jpg" alt="Tarjeta de Video" loading="lazy">
+                </picture>
+                
+                <h2>Tarjeta de Video ASUS NVIDIA GeForce RTX 5070 Ti Prime</h2>
+                
+                <p class="specs">16GB 256-bit GDDR7, PCI Express 5.0</p>
+                
+                <p class="precio">$25,449.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="fuente" data-precio="2109">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-COOLERMASTER-MPX-C005-AFAG-BUS-3cd020.jpg" type="image/webp">
+                    <img src="IMAGES/CP-COOLERMASTER-MPX-C005-AFAG-BUS-3cd020.jpg" alt="Fuente de Poder" loading="lazy">
+                </picture>
+                
+                <h2>Fuente de Poder Cooler Master MPX-C005-AFAG-BUS 80 PLUS Gold ATX</h2>
+                
+                <p class="specs">Modular, 24-pin ATX, 12VHPWR, 135mm, 1200W</p>
+                
+                <p class="precio">$2,109.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="tarjeta-madre" data-precio="3849">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-GIGABYTE-Z790EAGLEAX-6b7d39.jpg" type="image/webp">
+                    <img src="IMAGES/CP-GIGABYTE-Z790EAGLEAX-6b7d39.jpg" alt="Tarjeta Madre" loading="lazy">
+                </picture>
+                
+                <h2>Tarjeta Madre Gigabyte Z790 Eagle AX</h2>
+                
+                <p class="specs">ATX, LGA 1700, Intel Z790, 192GB DDR5, HDMI/DP para Intel</p>
+                
+                <p class="precio">$3,849.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="gabinete" data-precio="739">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-XZEAL-XZGAMC1B-0d2ea2.jpg" type="image/webp">
+                    <img src="IMAGES/CP-XZEAL-XZGAMC1B-0d2ea2.jpg" alt="Gabinete" loading="lazy">
+                </picture>
+                
+                <h2>Gabinete Xzeal CXi1</h2>
+                
+                <p class="specs">Mini-Tower, Micro-ATX/Mini-ITX, USB 2.0/3.0, sin Fuente, 3 Ventiladores Instalados, Negro</p>
+                
+                <p class="precio">$739.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="enfriamiento" data-precio="1849">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-CORSAIR-CW-9061001-WW-037926.jpg" type="image/webp">
+                    <img src="IMAGES/CP-CORSAIR-CW-9061001-WW-037926.jpg" alt="Enfriamiento Líquido" loading="lazy">
+                </picture>
+                
+                <h2>Corsair iCUE Link H100i RGB AIO Enfriamiento Líquido</h2>
+                
+                <p class="specs">CPU, 2x 120mm, hasta 2400RPM, Negro</p>
+                
+                <p class="precio">$1,849.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+            
+            <article class="product-card" data-tipo="ram" data-precio="2799">
+                <picture>
+                    <source media="(max-width: 640px)" srcset="IMAGES/CP-XPG-AX4U320016G16A-SBKD35G-cbcacf.jpg" type="image/webp">
+                    <img src="IMAGES/CP-XPG-AX4U320016G16A-SBKD35G-cbcacf.jpg" alt="Memoria RAM" loading="lazy">
+                </picture>
+                
+                <h2>Memoria RAM XPG Spectrix D35G DDR4</h2>
+                
+                <p class="specs">DDR4, 3200MHz, 16GB, CL16, XMP</p>
+                
+                <p class="precio">$2,799.00</p>
+                
+                <button class="buy-btn">Comprar</button>
+            </article>
+        </main>
+        
+        <!-- Barra lateral con filtros y gráfico -->
+        <aside class="filters-sidebar">
+            <h3>Filtros Avanzados</h3>
+            
+            <form id="filtros">
+        <div class="filter-group">
+            <label for="filtro-tipo">Tipo de componente</label>
+            <select id="filtro-tipo" name="tipo" class="filter-select">
+                <option value="">Todos</option>
+                <option value="fuente">Fuente de Poder</option>
+                <option value="tarjeta-madre">Tarjeta Madre</option>
+                <option value="tarjeta-video">Tarjeta de Video</option>
+                <option value="ram">Memoria RAM</option>
+                <option value="enfriamiento">Enfriamiento Líquido</option>
+                <option value="gabinete">Gabinete</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <label for="precio-min">Precio (MXN)</label>
+            <div class="price-range">
+                <input type="number" id="precio-min" name="min" class="filter-select" placeholder="Mín" min="0" step="100">
+                <span>–</span>
+                <input type="number" id="precio-max" name="max" class="filter-select" placeholder="Máx" min="0" step="100">
+            </div>
+        </div>
+        
+        <button type="reset" class="reset-btn">Limpiar filtros</button>
+        <p id="contador" class="filter-count" aria-live="polite"></p>
+            </form>
+        </aside>
+    </div>
+</body>
+</html>

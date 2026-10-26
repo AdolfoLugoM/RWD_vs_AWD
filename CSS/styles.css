@@ -1,0 +1,185 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+.header {
+    background-color: #1f2937;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header nav a {
+    color: #9ca3af;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Contenedor Principal (Grid) */
+.main-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Cuadrícula de 12 tarjetas (Desktop por defecto: 3 columnas) */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.buy-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* --- Contenedor de la Barra Lateral --- */
+.filters-sidebar {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+}
+
+.filters-sidebar h3 {
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f3f4f6;
+    padding-bottom: 8px;
+}
+
+/* --- Grupos de Filtros --- */
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 6px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background-color: #f9fafb;
+    font-size: 0.95rem;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.filter-select:focus {
+    border-color: #2563eb;
+    background-color: #fff;
+}
+
+/* --- Gráfica de Rendimiento --- */
+.comparative-chart h4 {
+    font-size: 1rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.chart-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 4px;
+}
+
+.chart-bar-container {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+    background-color: #2563eb;
+    border-radius: 9999px;
+    transition: width 0.4s ease-in-out;
+}
+
+/* --- Estilos específicos para la Versión Móvil (AWD) --- */
+.mobile-header {
+    background: #1e1f22;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.product-card[hidden] { display: none; }
+
+.price-range { display: flex; align-items: center; gap: 8px; }
+.price-range input { min-width: 0; }
+
+.reset-btn {
+    width: 100%; padding: 8px; border: 1px solid #d1d5db;
+    border-radius: 6px; background: #fff; cursor: pointer;
+}
+
+.filter-count { font-size: 0.85rem; color: #6b7280; margin-top: 10px; }
+
+/* Media Query para Tablet (640px - 1024px) */
+@media (max-width: 1024px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media Query para Móvil (< 640px) */
+@media (max-width: 640px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* En móvil la barra lateral pasa arriba del catálogo y ocupa todo el ancho */
+    .filters-sidebar {
+        order: -1;
+        max-width: none;
+        box-sizing: border-box;
+        width: 100%;
+        box-shadow: none;
+    }
+}
